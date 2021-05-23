@@ -1,0 +1,21 @@
+Package: stanIncrementalImportanceSampling
+Title: Provides Functionality for Calculating Importance Weights for Stan MCMC Samples
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Alex",
+           family = "Phillips",
+           role = c("aut", "cre"),
+           email = "A.M.Phillips@liverpool.ac.uk")
+Description: Using a previously fitted Stan model with MCMC samples and a new set of
+  input data, calculates per-iteration importance weights for the original MCMC samples
+  conditional on the new data. For example, a time series model is fitted using Stan,
+  up to day 99. Data up to day 100 is then made available and importance weights for the
+  MCMC samples from day 99 given the new data can be calculated.
+License: use_mit_license()
+Encoding: UTF-8
+LazyData: true
+Imports:
+  rstan,
+  matrixStats
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
